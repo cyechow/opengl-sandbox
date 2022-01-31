@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="View.cpp" />
+    <ClCompile Include="Point.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="DrawableBase.cpp">
+      <Filter>Drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="TriangleDrawable.cpp">
+      <Filter>Drawables</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="Shape.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Edge.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="RectangleDrawable.cpp">
+      <Filter>Drawables</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="View.h" />
+    <ClInclude Include="Point.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="TriangleDrawable.h">
+      <Filter>Drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawableBase.h">
+      <Filter>Drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="ShaderUtils.h">
+      <Filter>Drawables\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="RectangleDrawable.h">
+      <Filter>Drawables</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Drawables">
+      <UniqueIdentifier>{e0e06f0c-5fbf-4744-a198-fd4d2b874688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{704504c6-733a-4c93-8254-0bac7f2dcf06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawables\Shaders">
+      <UniqueIdentifier>{d9d5efbe-3754-4649-868f-6112b3d0cf7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res">
+      <UniqueIdentifier>{ec870fd5-a9c3-4d08-874a-f1ecfa9f5ab9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="res\shaders">
+      <UniqueIdentifier>{2ab7d06b-35ec-4ce0-b47e-642517f1e388}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\Basic.shader">
+      <Filter>res\shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>
