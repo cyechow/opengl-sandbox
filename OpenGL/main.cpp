@@ -13,6 +13,8 @@
 #include "TriangleDrawable.h"
 #include "RectangleDrawable.h"
 
+#include "OpenGLUtils.h"
+
 int main()
 {
 	std::cout << "Opening GLFW window...\n";

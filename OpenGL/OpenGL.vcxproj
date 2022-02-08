@@ -160,6 +160,7 @@
     <ClInclude Include="DrawableBase.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="Geometry.h" />
+    <ClInclude Include="OpenGLUtils.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="ShaderUtils.h" />

@@ -4,6 +4,8 @@
 
 #include "ShaderUtils.h"
 
+#include "OpenGLUtils.h"
+
 RectangleDrawable::RectangleDrawable() :
 	BaseClass(),
 	m_iPositionDataBuffer( 0 ),
@@ -68,23 +70,25 @@ RectangleDrawable::DrawGL()
 	unsigned int shader = ShaderUtils::S_CreateShader( shaderSource.VertexSource, shaderSource.FragmentSource );
 
 	// State machine - use this new shader program:
-	glUseProgram( shader );
+	GLCall( glUseProgram( shader ) );
 
 	// Select the position buffer
-	glBindBuffer( GL_ARRAY_BUFFER, m_iPositionDataBuffer );
+	GLCall( glBindBuffer( GL_ARRAY_BUFFER, m_iPositionDataBuffer ) );
 
 	// Select the index buffer
-	glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, m_iPositionIndexBuffer );
+	GLCall( glBindBuffer( GL_ELEMENT_ARRAY_BUFFER, m_iPositionIndexBuffer ) );
 
 	// Tell OpenGL what the layout of buffer is:
-	glEnableVertexArrayAttrib( 0, 0 );
-	glVertexAttribPointer( 0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof( float ), 0 );
+	GLCall( glEnableVertexArrayAttrib( 0, 0 ) );
+	GLCall( glVertexAttribPointer( 0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof( float ), 0 ) );
 
 	// Draw - we're drawing the index buffer instead of the vertex, it has 6 indices:
-	glDrawElements( GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr );
+	GLCall( glDrawElements( GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr ) );
+	//glDrawElements( GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr );
+	//GLCall( glDrawElements( GL_TRIANGLES, 6, GL_INT, nullptr ) ); // Error example
 
 	// Cleanup
-	glDeleteProgram( shader );
+	GLCall( glDeleteProgram( shader ) );
 }
 
 void

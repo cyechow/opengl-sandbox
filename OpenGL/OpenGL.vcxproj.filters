@@ -55,6 +55,7 @@
     <ClInclude Include="Rectangle.h">
       <Filter>Geometry</Filter>
     </ClInclude>
+    <ClInclude Include="OpenGLUtils.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Drawables">
